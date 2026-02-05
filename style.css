@@ -1,0 +1,201 @@
+/* საერთო სტილები */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 50px 0;
+}
+
+/* --- სექცია 1: პროდუქტის ქარდი --- */
+.product-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.card {
+  background: white;
+  width: 320px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Sale Badge Transformation */
+.sale-badge {
+  background: #000;
+  color: #fff;
+  padding: 6px 40px;
+  position: absolute;
+  top: 15px;
+  left: -35px;
+  transform: rotate(-45deg);
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-box {
+  background: #f1f5f9;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ანიმაცია: ჰოვერზე ფეხსაცმელი "ცოცხლდება" */
+.card:hover .image-box img {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.card-content {
+  padding: 20px;
+}
+.title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.score {
+  background: #fef08a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.stars {
+  color: #f59e0b;
+  letter-spacing: 2px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.current-price {
+  font-size: 24px;
+  font-weight: bold;
+}
+.old-price {
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.add-to-cart {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- სექცია 2: ფასების ქარდები --- */
+.pricing-section {
+  padding-bottom: 100px;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+.pricing-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* მობილურისთვის */
+}
+
+.price-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  width: 250px;
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: default;
+}
+
+/* Hover Zoom ეფექტი */
+.price-card:hover {
+  transform: scale(1.1); /* ზუმი */
+  z-index: 10;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+  border-radius: 12px;
+}
+
+.featured {
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.amount {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.amount span {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+ul li {
+  padding: 6px 0;
+  font-size: 13px;
+  color: #334155;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #3b82f6;
+  background: white;
+  color: #3b82f6;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn.primary,
+.price-card:hover .btn {
+  background: #3b82f6;
+  color: white;
+}
